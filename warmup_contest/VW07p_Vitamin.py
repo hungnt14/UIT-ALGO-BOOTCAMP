@@ -17,7 +17,7 @@ for c in range(x + 1):
         if (s[i] <= c):
             f[c] = min(f[c], f[c - s[i]] + i + 2)
             if (i == n - 1):
-                k = c - s[n - 1]
+                k = (c - s[n - 1]) // a[n - 1]
                 f[c] = min(f[c], f[c - (s[n - 1] + k * a[n - 1])] + n + k + 1)
 
 if (f[x] == 1000000000):
